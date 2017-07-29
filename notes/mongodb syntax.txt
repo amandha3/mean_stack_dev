@@ -1,0 +1,84 @@
+MongoDB System
+---------------
+
+DATABASE is a COLLECTION of DOCUMENTS
+
+DATABASE
+--------
+
+Create Database
+---------------
+use database_name
+use test_db
+
+Delete Databse
+--------------
+db.dropDatabase()
+
+List All Databases
+------------------
+show dbs
+
+Show current Database
+---------------------
+db
+
+
+
+COLLECTION
+-----------
+
+Create Collection
+-----------------
+db.createCollection("coolection_name")
+
+Show Collections
+----------------
+show collections
+
+Drop Collection
+---------------
+db.collection_name.drop()
+
+
+
+DOCUMENT
+--------
+
+Insert new Document
+----------------
+db.colection_name.insert()
+db.student.insert([{name:'Steve',contact:'9191230000',address:'Queens, New York'},{name:'Chris',contact:'9195461000',address:'Manhattan, New York'},{name:'John',contact:'9193210000',address:'The Bronx, New York'}])
+
+Find Document
+-----------
+db.student.find()
+db.student.find().pretty()
+
+
+Update Document
+---------------
+db.student.update({name:'Steve'},{$set:{'name':'Steven'}},{multi:true})
+
+db.student.update({name:'Steven'},{$set:{'grade':'95'}},{multi:true})
+
+
+Delete Document
+---------------
+
+db.student.remove({'name':'Steven'})
+
+Only first record
+db.mycol.remove(DELETION_CRITERIA,1)
+
+All documents
+db.mycol.remove()
+
+
+
+
+
+
+
+
+
