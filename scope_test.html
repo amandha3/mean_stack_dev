@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<body ng-app="myApp">
+
+The Color outside all div is {{color}}
+
+<div ng-controller="myCtrl">
+Color inside first div is {{color}}
+</div>
+
+<div controller="myCtrl1">
+Color inside second div is {{color}}
+</div>
+
+<script>
+angular.module("");
+
+</script>
+
+</body>
+</html>
